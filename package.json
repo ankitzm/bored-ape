@@ -1,16 +1,16 @@
 {
-  "name": "bored-ape",
-  "license": "UNLICENSED",
-  "scripts": {
-    "codegen": "graph codegen",
-    "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ ankitzm/bored-ape",
-    "create-local": "graph create --node http://localhost:8020/ ankitzm/bored-ape",
-    "remove-local": "graph remove --node http://localhost:8020/ ankitzm/bored-ape",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ankitzm/bored-ape"
-  },
-  "dependencies": {
-    "@graphprotocol/graph-cli": "0.32.0",
-    "@graphprotocol/graph-ts": "0.27.0"
-  }
+	"name": "fly-fish",
+	"license": "UNLICENSED",
+	"scripts": {
+		"codegen": "graph codegen",
+		"build": "graph build",
+		"deploy": "graph deploy --node https://api.thegraph.com/deploy/ ankitzm/fly-fish",
+		"create-local": "graph create --node http://localhost:8020/ ankitzm/fly-fish",
+		"remove-local": "graph remove --node http://localhost:8020/ ankitzm/fly-fish",
+		"deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 ankitzm/fly-fish"
+	},
+	"dependencies": {
+		"@graphprotocol/graph-cli": "0.32.0",
+		"@graphprotocol/graph-ts": "0.27.0"
+	}
 }

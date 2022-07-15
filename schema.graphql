@@ -1,0 +1,28 @@
+type Token @entity {
+    id: ID!
+    tokenID: BigInt!
+    image: String!
+    background: String!
+    fur: String!
+    hat: String!
+    mouth: String!
+    eyes: String!
+    owner: User!
+}
+
+type User @entity {
+    id: ID!
+    tokens: [Token!]! @derievedFrom(field: "owner")
+}
+
+type _Schema_ 
+    @fulltext(
+        name: "apeSearch"
+        language: en
+        algorithm: rank
+        include: [{
+            entity: "Token",
+            fields:
+            [{name: "name"}, {name: "fur"}, {name: "hat"}, {name: "mouth"}, {name: "eyes"}]
+        }]
+    )

@@ -1,6 +1,9 @@
 specVersion: 0.0.4
 schema:
   file: ./schema.graphql
+features:
+  - fullTextSearch
+  - ipfsOnEthereumContracts
 dataSources:
   - kind: ethereum
     name: Token

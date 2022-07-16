@@ -24,6 +24,6 @@ type _Schema_
         include: [{
             entity: "Token",
             fields:
-            [{name: "name"}, {name: "fur"}, {name: "hat"}, {name: "mouth"}, {name: "eyes"}]
+            [{name: "fur"}, {name: "hat"}, {name: "mouth"}, {name: "eyes"}]
         }]
     )

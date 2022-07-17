@@ -9,9 +9,9 @@ dataSources:
     name: Token
     network: mainnet
     source:
-      address: "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d"
+      address: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"
       abi: Token
-      startBlock: 12319428
+      startBlock: 12287507
     mapping :
       kind: ethereum/events
       apiVersion: 0.0.5

@@ -1,29 +1,40 @@
 type Token @entity {
-    id: ID!
-    tokenID: BigInt!
-    tokenURI: String!
-    image: String!
-    background: String!
-    fur: String!
-    hat: String!
-    mouth: String!
-    eyes: String!
-    owner: User!
+	id: ID!
+	tokenID: BigInt!
+	tokenURI: String!
+	image: String!
+	createdAtTimestamp: BigInt!
+	updatedAtTimestamp: BigInt
+	background: String
+	fur: String
+	hat: String
+	mouth: String
+	eyes: String
+	creator: User!
+	owner: User!
 }
 
 type User @entity {
-    id: ID!
-    tokens: [Token!]! @derievedFrom(field: "owner")
+	id: ID!
+	tokens: [Token!]! @derievedFrom(field: "owner")
+	created: [Token!]! @derivedFrom(field: "creator")
 }
 
-type _Schema_ 
-    @fulltext(
-        name: "apeSearch"
-        language: en
-        algorithm: rank
-        include: [{
-            entity: "Token",
-            fields:
-            [{name: "fur"}, {name: "hat"}, {name: "mouth"}, {name: "eyes"}]
-        }]
-    )
+type _Schema_
+	@fulltext(
+		name: "apeSearch"
+		language: en
+		algorithm: rank
+		include: [
+			{
+				entity: "Token"
+				fields: [
+					{ name: "background" }
+					{ name: "fur" }
+					{ name: "hat" }
+					{ name: "mouth" }
+					{ name: "eyes" }
+				]
+			}
+		]
+	)
